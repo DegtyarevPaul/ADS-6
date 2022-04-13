@@ -25,7 +25,7 @@ arr[i % size] = arr[(i - 1) % size];
 break;
 }
 }
-arr[i + 1] = element;
+arr[(i + 1) % size] = element;
 end++;
 }
 T& pop() {
