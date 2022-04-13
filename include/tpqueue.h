@@ -7,10 +7,15 @@ class TPQueue {
  private:
 int begin;
 int end;
-T arr[10];
+T arr[5];
 
  public:
-TPQueue() : begin(0), end(0) {}
+TPQueue() {
+begin = 0;
+end = 0;
+for(int i = 0; i < 5; i++)
+arr[i].prior = 0;
+}
 void push(T element) {
 int i = end;
 for (i; i >= begin; i--) {
