@@ -12,16 +12,18 @@ private:
 public:
   TPQueue() : begin(0), end(0);
   void push(T element) {
-    for(int i = last; i > firs; i--) {
-      if(element.prior > arr[i].prior) {
-      
+    int i = last;
+    for(int i; i > firs; i--) {
+      if(element.prior > arr[i % size].prior) {
+        arr[i % size] = arr[(i + 1) % size];
       } else {
-      
+        break;
       }
     }
+    arr[i] = element;
   }
   void pop() {
-  
+    return arr[++first % size];
   }
 };
 
