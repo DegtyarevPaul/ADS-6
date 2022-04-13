@@ -1,15 +1,15 @@
-// Copyright 2022 DegtyarevPaul 
+// Copyright 2022 DegtyarevPaul
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
 template<typename T, int size>
 class TPQueue {
-private:
+ private:
   int begin;
   int end;
   T arr[5];
-  
-public:
+
+ public:
   TPQueue() : begin(0), end(0) {}
   void push(T element) {
     int i = end;
@@ -23,7 +23,7 @@ public:
     arr[i] = element;
     end++;
   }
-  void pop() {
+  T& pop() {
     return arr[++begin % size];
   }
 };
