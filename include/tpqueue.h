@@ -29,6 +29,7 @@ arr[(i + 1) % size] = element;
 end++;
 }
 T& pop() {
+arr[(begin) % size].prior = 0;
 return arr[(begin++) % size];
 }
 };
