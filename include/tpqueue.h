@@ -6,7 +6,7 @@ template<typename T, int size>
 class TPQueue {
  private:
 int begin;
-int end; 
+int end;
 T arr[5];
 
  public:
@@ -19,7 +19,7 @@ arr[i].prior = 0;
 void push(T element) {
 int i = end;
 for (i; i >= begin; i--) {
-if (element.prior > arr[i % size].prior) {             
+if (element.prior > arr[i % size].prior) {
 arr[i % size] = arr[(i - 1) % size];
 } else {
 break;
