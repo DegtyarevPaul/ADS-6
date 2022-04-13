@@ -10,11 +10,11 @@ private:
   T arr[5];
   
 public:
-  TPQueue() : begin(0), end(0);
+  TPQueue() : begin(0), end(0) {}
   void push(T element) {
     int i = end;
-    for(int i; i > begin; i--) {
-      if(element.prior > arr[i % size].prior) {
+    for (int i; i > begin; i--) {
+      if (element.prior > arr[i % size].prior) {
         arr[i % size] = arr[(i + 1) % size];
       } else {
         break;
@@ -24,7 +24,7 @@ public:
     end++;
   }
   void pop() {
-    return arr[++first % size];
+    return arr[++begin % size];
   }
 };
 
