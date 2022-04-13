@@ -4,12 +4,12 @@
 
 template<typename T, int size>
 class TPQueue {
-private:
+ private:
 int begin;
 int end;
 T arr[5];
 
-public:
+ public:
 TPQueue() : begin(0), end(0) {}
 void push(T element) {
 int i = end;
