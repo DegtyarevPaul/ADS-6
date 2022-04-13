@@ -1,10 +1,28 @@
-// Copyright 2022 NNTU-CS
+// Copyright 2022 DegtyarevPaul 
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
 template<typename T, int size>
 class TPQueue {
-  // реализация шаблона очереди с приоритетом на кольцевом буфере
+private:
+  int begin;
+  int end;
+  T arr[5];
+  
+public:
+  TPQueue() : begin(0), end(0);
+  void push(T element) {
+    for(int i = last; i > firs; i--) {
+      if(element.prior > arr[i].prior) {
+      
+      } else {
+      
+      }
+    }
+  }
+  void pop() {
+  
+  }
 };
 
 struct SYM {
